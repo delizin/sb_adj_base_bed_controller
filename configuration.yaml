@@ -1,0 +1,111 @@
+mqtt:
+  - button:
+      unique_id: bed_head_up_btn
+      name: "Bed Head Up"
+      command_topic: "home/bed/command"
+      payload_press: "head_up"
+      availability:
+        - topic: "home/bed/available"
+      qos: 0
+      retain: false
+      entity_category: "config"
+  - button:
+      unique_id: bed_head_down_btn
+      name: "Bed Head Down"
+      command_topic: "home/bed/command"
+      payload_press: "head_down"
+      availability:
+        - topic: "home/bed/available"
+      qos: 0
+      retain: false
+      entity_category: "config"
+  - button:
+      unique_id: bed_back_up_btn
+      name: "Bed Back Up"
+      command_topic: "home/bed/command"
+      payload_press: "back_up"
+      availability:
+        - topic: "home/bed/available"
+      qos: 0
+      retain: false
+      entity_category: "config"
+  - button:
+      unique_id: bed_back_down_btn
+      name: "Bed Back Down"
+      command_topic: "home/bed/command"
+      payload_press: "back_down"
+      availability:
+        - topic: "home/bed/available"
+      qos: 0
+      retain: false
+      entity_category: "config"
+  - button:
+      unique_id: bed_leg_up_btn
+      name: "Bed Leg Up"
+      command_topic: "home/bed/command"
+      payload_press: "leg_up"
+      availability:
+        - topic: "home/bed/available"
+      qos: 0
+      retain: false
+      entity_category: "config"
+  - button:
+      unique_id: bed_leg_down_btn
+      name: "Bed Leg Down"
+      command_topic: "home/bed/command"
+      payload_press: "leg_down"
+      availability:
+        - topic: "home/bed/available"
+      qos: 0
+      retain: false
+      entity_category: "config"
+  - button:
+      unique_id: bed_sit_btn
+      name: "Bed Sit"
+      command_topic: "home/bed/command"
+      payload_press: "sit"
+      availability:
+        - topic: "home/bed/available"
+      qos: 0
+      retain: false
+      entity_category: "config"
+  - button:
+      unique_id: bed_zero_g_btn
+      name: "Bed Zero-G"
+      command_topic: "home/bed/command"
+      payload_press: "zero_g"
+      availability:
+        - topic: "home/bed/available"
+      qos: 0
+      retain: false
+      entity_category: "config"
+  - button:
+      unique_id: bed_flat_btn
+      name: "Bed Flat"
+      command_topic: "home/bed/command"
+      payload_press: "flat"
+      availability:
+        - topic: "home/bed/available"
+      qos: 0
+      retain: false
+      entity_category: "config"
+  - button:
+      unique_id: bed_vibrate_head_btn
+      name: "Bed Vibrate Head"
+      command_topic: "home/bed/command"
+      payload_press: "vibrate_head"
+      availability:
+        - topic: "home/bed/available"
+      qos: 0
+      retain: false
+      entity_category: "config"
+  - button:
+      unique_id: bed_vibrate_feet_btn
+      name: "Bed Vibrate Feet"
+      command_topic: "home/bed/command"
+      payload_press: "vibrate_feet"
+      availability:
+        - topic: "home/bed/available"
+      qos: 0
+      retain: false
+      entity_category: "config"
