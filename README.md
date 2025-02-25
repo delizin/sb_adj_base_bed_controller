@@ -2,7 +2,7 @@
 
 This project provides a Python-based controller that uses Bluetooth Low Energy (BLE) to control a [Southern Bay International Adjustable Bed Base](https://southbayinternational.com/collections/adjustable-bases) (model number MMKD-TL). This model was sold as a [Sam's Club Member's Mark Premier Adjustable Base with Pillow Tilt and Massage](https://www.samsclub.com/p/members-mark-adjustable-bed-base-massage-wireless-remote-app-usb/prod22421683). The controller integrates with Home Assistant via MQTT, enabling remote control of the bed.
 
-**Note:** This is a personal project that I am sharing in case others find it helpful. It is complete and working, but I am not actively maintaining it.
+**Note:** This is a personal project that I am sharing in case others find it helpful. It is complete and working, but I am not actively maintaining it or providing support.
 
 ---
 
@@ -10,13 +10,11 @@ This project provides a Python-based controller that uses Bluetooth Low Energy (
 
 Adjustable bed bases like the MMKD-TL can be controlled via a radio remote or via Bluetooth. Although an official Android app is available, it poses privacy concerns by requesting invasive permissions (such as precise location and camera access) and transmitting data to servers in China.
 
-I wanted a solution that allowed control of my bed from both my phone and my computer using [Home Assistant](https://www.home-assistant.io/). Since my Home Assistant server is out of Bluetooth range from the bed, I developed this solution: a Python script runs on a computer near the bedroom, maintains a persistent Bluetooth connection with the bed, and subscribes to an MQTT topic to listen for commands. When buttons are tapped or held in Home Assistant, the script publishes commands to the topic `home/bed/command`.
+This project was created to provide a **privacy-friendly** and **automated** way to control the adjustable bed from a computer or phone using [**Home Assistant**](https://www.home-assistant.io/). Since my Home Assistant server was located outside of bluetooth range from my bed, I chose to use a MQTT broker to share commands from Home Assistant across my local area network. I have a separate computer near the bedroom that is running a python script that:
 
-This project was created to provide a **privacy-friendly** and **automated** way to control the bed from **Home Assistant**. Since my Home Assistant server is out of Bluetooth range, the solution involves running a **Python script** on a computer near the bedroom. This script:
-- Maintains a **persistent** Bluetooth connection with the bed.
-- **Subscribes** to an MQTT topic (`home/bed/command`) to listen for Home Assistant commands.
-- **Executes** bed movement commands when buttons are tapped or held in Home Assistant.
-
+- Maintains a persistent Bluetooth connection with the bed.
+- Subscribes to an MQTT topic (*home/bed/command*) to listen for Home Assistant commands.
+- Executes bed movement commands when buttons are tapped or held in Home Assistant.
 
 ---
 
@@ -91,13 +89,13 @@ publish the message.
    - [**button-card**](https://github.com/custom-cards/button-card)
    - [**card_mod**](https://github.com/thomasloven/lovelace-card-mod)
 8. Modify Home Assistant configuration.yaml
-   - Append the contents of configuration.yaml from this repository to your Home Assistant configuration.yaml file. This adds the commands as Home Assistant entities and isn't strictly necessary, but you would need to remove the entity references in the cards if you chose not to do it.
-9. Create Home Assistant Card for Remote Control
+   - Append the contents of configuration.yaml from this repository to your Home Assistant configuration.yaml file. This adds the commands as Home Assistant entities so I could use them for automations in the future and isn't strictly necessary, but you would need to remove the entity references in the cards if you chose not to do it.
+10. Create Home Assistant Card for Remote Control
     1. On your Home Assistant Dashboard, go into Edit Mode, then click Add Card
     2. Select the card type as "Manual" and clear any text that may be prepopulated in the Card Configuration code box.
     3. Copy and paste the contents of the home-assistant-card.yaml file from this repository into the Card Configuration code box.
-10. Ensure that the MQTT Broker server is running.
-11. Run the mqtt_bed_controller.py python script.
+11. Ensure that the MQTT Broker server is running.
+12. Run the mqtt_bed_controller.py python script.
 
         python mqtt_bed_controller.py
 
