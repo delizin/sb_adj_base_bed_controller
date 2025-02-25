@@ -21,6 +21,7 @@ This project was created to provide a **privacy-friendly** and **automated** way
 ## Features
 
 This controller supports the following functions for MMKD-compatible beds via BLE:
+> **Note:** This script does not support sending separate commands to beds with an A + B side. All commands are sent to "**Both**" sides.
 
 ✅ Pillow/Head Tilt **Up & Down**  
 ✅ Back Tilt **Up & Down**  
@@ -34,7 +35,9 @@ This controller supports the following functions for MMKD-compatible beds via BL
    - Vibrate **Head Massage** Motor
    - Vibrate **Foot Massage** Motor 
 
-> **Note:** This script does not support sending separate commands to beds with an A + B side. All commands are sent to "**Both**" sides.
+✅ **Home Assistant Custom Remote Control Card**:
+
+![image](https://github.com/user-attachments/assets/03b76298-212b-4c0c-9cd3-cc5125b49e5d)
 
 ---
 
