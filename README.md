@@ -1,6 +1,6 @@
 # SB Adjustable Base BLE+MQTT Controller
 
-This project provides a Python-based controller that uses Bluetooth Low Energy (BLE) to control a [Southern Bay International Adjustable Bed Base](https://southbayinternational.com/collections/adjustable-bases) (model number MMKD-TL). This model was sold as a [Sam's Club Member's Mark Premier Adjustable Base with Pillow Tilt and Massage](https://www.samsclub.com/p/members-mark-adjustable-bed-base-massage-wireless-remote-app-usb/prod22421683). The controller integrates with Home Assistant via MQTT, enabling remote control of the bed.
+This project provides a Python-based controller that uses Bluetooth Low Energy (BLE) to control a [South Bay International Adjustable Bed Base](https://southbayinternational.com/collections/adjustable-bases) (model number MMKD-TL). This model was sold as a [Sam's Club Member's Mark Premier Adjustable Base with Pillow Tilt and Massage](https://www.samsclub.com/p/members-mark-adjustable-bed-base-massage-wireless-remote-app-usb/prod22421683). The controller integrates with Home Assistant via MQTT, enabling remote control of the bed.
 
 **Note:** This is a personal project that I am sharing in case others find it helpful. It is complete and working, but I am not actively maintaining it or providing support.
 
