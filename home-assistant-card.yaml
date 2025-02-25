@@ -1,0 +1,283 @@
+type: vertical-stack
+cards:
+  - type: horizontal-stack
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: custom:button-card
+            entity: button.bed_head_up
+            name: Head Up
+            show_name: true
+            show_icon: true
+            icon: mdi:arrow-up-bold
+            tap_action:
+              action: perform-action
+              perform_action: mqtt.publish
+              target: {}
+              data:
+                evaluate_payload: false
+                qos: 0
+                topic: home/bed/command
+                payload: head_up
+            hold_action:
+              action: perform-action
+              perform_action: mqtt.publish
+              target: {}
+              data:
+                evaluate_payload: false
+                qos: 0
+                topic: home/bed/command
+                payload: start_head_up
+              repeat: true
+          - type: custom:button-card
+            entity: button.bed_head_down
+            name: Head Down
+            show_name: true
+            show_icon: true
+            icon: mdi:arrow-down-bold
+            tap_action:
+              action: perform-action
+              perform_action: mqtt.publish
+              target: {}
+              data:
+                evaluate_payload: false
+                qos: 0
+                topic: home/bed/command
+                payload: head_down
+            hold_action:
+              action: perform-action
+              perform_action: mqtt.publish
+              target: {}
+              data:
+                evaluate_payload: false
+                qos: 0
+                topic: home/bed/command
+                payload: start_head_down
+              repeat: true
+      - type: vertical-stack
+        cards:
+          - type: custom:button-card
+            entity: button.bed_back_up
+            name: Back Up
+            show_name: true
+            show_icon: true
+            icon: mdi:arrow-up-bold-circle
+            tap_action:
+              action: perform-action
+              perform_action: mqtt.publish
+              target: {}
+              data:
+                evaluate_payload: false
+                qos: 0
+                topic: home/bed/command
+                payload: back_up
+            hold_action:
+              action: perform-action
+              perform_action: mqtt.publish
+              target: {}
+              data:
+                evaluate_payload: false
+                qos: 0
+                topic: home/bed/command
+                payload: start_back_up
+              repeat: true
+          - type: custom:button-card
+            entity: button.bed_back_down
+            name: Back Down
+            show_name: true
+            show_icon: true
+            icon: mdi:arrow-down-bold-circle
+            tap_action:
+              action: perform-action
+              perform_action: mqtt.publish
+              target: {}
+              data:
+                evaluate_payload: false
+                qos: 0
+                topic: home/bed/command
+                payload: back_down
+            hold_action:
+              action: perform-action
+              perform_action: mqtt.publish
+              target: {}
+              data:
+                evaluate_payload: false
+                qos: 0
+                topic: home/bed/command
+                payload: start_back_down
+              repeat: true
+      - type: vertical-stack
+        cards:
+          - type: custom:button-card
+            entity: button.bed_leg_up
+            name: Leg Up
+            show_name: true
+            show_icon: true
+            icon: mdi:arrow-up-bold-box
+            tap_action:
+              action: perform-action
+              perform_action: mqtt.publish
+              target: {}
+              data:
+                evaluate_payload: false
+                qos: 0
+                topic: home/bed/command
+                payload: leg_up
+            hold_action:
+              action: perform-action
+              perform_action: mqtt.publish
+              target: {}
+              data:
+                evaluate_payload: false
+                qos: 0
+                topic: home/bed/command
+                payload: start_leg_up
+              repeat: true
+          - type: custom:button-card
+            entity: button.bed_leg_down
+            name: Leg Down
+            show_name: true
+            show_icon: true
+            icon: mdi:arrow-down-bold-box
+            tap_action:
+              action: perform-action
+              perform_action: mqtt.publish
+              target: {}
+              data:
+                evaluate_payload: false
+                qos: 0
+                topic: home/bed/command
+                payload: leg_down
+            hold_action:
+              action: perform-action
+              perform_action: mqtt.publish
+              target: {}
+              data:
+                evaluate_payload: false
+                qos: 0
+                topic: home/bed/command
+                payload: start_leg_down
+              repeat: true
+  - type: horizontal-stack
+    cards:
+      - type: button
+        entity: button.bed_sit
+        name: Sit
+        show_name: true
+        show_icon: true
+        icon: mdi:seat-outline
+        tap_action:
+          action: perform-action
+          perform_action: mqtt.publish
+          target: {}
+          data:
+            evaluate_payload: false
+            qos: 0
+            topic: home/bed/command
+            payload: sit
+        hold_action:
+          action: perform-action
+          perform_action: mqtt.publish
+          target: {}
+          data:
+            evaluate_payload: false
+            qos: 0
+            topic: home/bed/command
+            payload: sit
+      - type: button
+        entity: button.bed_zero_g
+        name: Zero‑G
+        show_name: true
+        show_icon: true
+        icon: mdi:sofa
+        tap_action:
+          action: perform-action
+          perform_action: mqtt.publish
+          target: {}
+          data:
+            evaluate_payload: false
+            qos: 0
+            topic: home/bed/command
+            payload: zero_g
+        hold_action:
+          action: perform-action
+          perform_action: mqtt.publish
+          target: {}
+          data:
+            evaluate_payload: false
+            qos: 0
+            topic: home/bed/command
+            payload: zero_g
+      - type: button
+        entity: button.bed_flat
+        name: Flat
+        show_name: true
+        show_icon: true
+        icon: mdi:bed-queen-outline
+        tap_action:
+          action: perform-action
+          perform_action: mqtt.publish
+          target: {}
+          data:
+            evaluate_payload: false
+            qos: 0
+            topic: home/bed/command
+            payload: flat
+        hold_action:
+          action: perform-action
+          perform_action: mqtt.publish
+          target: {}
+          data:
+            evaluate_payload: false
+            qos: 0
+            topic: home/bed/command
+            payload: flat
+  - type: horizontal-stack
+    cards:
+      - show_name: true
+        show_icon: true
+        type: button
+        entity: button.bed_vibrate_head
+        name: Vibrate Head
+        icon: mdi:vibrate
+        card_mod:
+          style: |
+            ha-card {
+              height: 50px;
+              max-height: 50px;
+            }
+        tap_action:
+          action: none
+        hold_action:
+          action: perform-action
+          perform_action: mqtt.publish
+          target: {}
+          data:
+            evaluate_payload: false
+            qos: 0
+            topic: home/bed/command
+            payload: vibrate_head
+      - show_name: true
+        show_icon: true
+        type: button
+        entity: button.bed_vibrate_feet
+        name: Vibrate Feet
+        icon: mdi:vibrate
+        card_mod:
+          style: |
+            ha-card {
+              height: 50px;
+              max-height: 50px;
+            }
+        tap_action:
+          action: none
+        hold_action:
+          action: perform-action
+          perform_action: mqtt.publish
+          target: {}
+          data:
+            evaluate_payload: false
+            qos: 0
+            topic: home/bed/command
+            payload: vibrate_feet
+title: Adjustable Bed Controls
